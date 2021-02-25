@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GOTapp.DetailPage">
+
+     <RelativeLayout>
+
+     <Image x:Name="image"
+        Source="{Binding characterImageThumb}"
+           RelativeLayout.WidthConstraint="{ConstraintExpression
+        Type=RelativeToParent, Property=Width,Factor=1}"
+
+           RelativeLayout.HeightConstraint="{ConstraintExpression
+        Type=RelativeToParent,Property=Height, Factor=0.5}"
+           />
+    <Label x:Name="firstLabel"
+        Text="{Binding characterName}"
+           RelativeLayout.YConstraint="{ConstraintExpression
+        Type=RelativeToView,ElementName=image,Property=Height,
+        Factor=1,Constant=20}"
+              RelativeLayout.XConstraint="{ConstraintExpression
+        Type=RelativeToParent,Property=Width,
+        Factor=0.5,Constant= -40}"
+           />
+    <Label Text="{Binding actorName}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+        Type=RelativeToView,ElementName=image,Property=Height,
+        Factor=1,Constant=45}"
+              RelativeLayout.XConstraint="{ConstraintExpression
+        Type=RelativeToParent,Property=Width,
+        Factor=0.5, Constant= -40}"
+           />
+
+</RelativeLayout>
+
+<!--
+    Add stack layout with slider, label and button
+    Add relative layout constrains so the 
+    Add correct binding expression to bind the elements
+    to the corresponding objects
+    Add click listener to the save button and implement it in code behind.
+    -->
+</ContentPage>
